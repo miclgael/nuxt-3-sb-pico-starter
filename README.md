@@ -34,3 +34,11 @@ pnpm run preview
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+
+## Storybook
+
+To work on components in isolation using Storybook:
+
+```bash
+pnpm run storybook
+```
