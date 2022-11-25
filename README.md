@@ -7,7 +7,6 @@ Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 Make sure to install the dependencies:
 
 ```bash
-# pnpm
 pnpm install --shamefully-hoist
 ```
 
