@@ -1,17 +1,29 @@
 <script setup>
 const props = defineProps({
+  /**
+   * Type of element to be used (e.g. section, main, footer, header, etc.)
+   */
   element: {
     type: String,
     default: 'section'
   },
+  /**
+   * Treat the section as a container element
+   */
   container: {
     type: Boolean,
     default: true
   },
+  /**
+   * Add a background color to the section
+   */
   background: {
     type: String,
     default: 'rgba(0,0,0,0)'
   },
+  /**
+   * Text color to be applied to the section
+   */
   color: {
     type: String,
     default: 'black'
