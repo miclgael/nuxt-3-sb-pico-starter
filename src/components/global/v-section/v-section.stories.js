@@ -8,8 +8,8 @@ const colorControls = {
 
 const defaultArgs = {
   slotTemplate: '<h1>Content</h1>',
-  background: 'indigo',
-  color: 'white',
+  background: 'lightblue',
+  color: 'indigo',
   element: 'section'
 }
 
