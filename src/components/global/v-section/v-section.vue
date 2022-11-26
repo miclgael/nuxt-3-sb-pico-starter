@@ -10,7 +10,7 @@ const props = defineProps({
   /**
    * Treat the section as a container element
    */
-  container: {
+  isContainer: {
     type: Boolean,
     default: true
   },
@@ -19,21 +19,21 @@ const props = defineProps({
    */
   background: {
     type: String,
-    default: 'rgba(0,0,0,0)'
+    default: '#ffffff'
   },
   /**
    * Text color to be applied to the section
    */
   color: {
     type: String,
-    default: 'black'
+    default: '#000000'
   }
 })
 </script>
 
 <template>
   <component :is="element" :class="[$style.section, , background ? $style.section__background : null]">
-    <div :class="[container ? $style.section__inside : null]">
+    <div :class="[isContainer ? $style.section__inside : null]">
 
       <slot />
     </div>
