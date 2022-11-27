@@ -9,6 +9,7 @@ export default defineConfig({
     coverage: {
       reporter: ['text']
     },
-    reporters: ['verbose']
+    reporters: ['verbose'],
+    environment: 'happy-dom'
   }
 })
