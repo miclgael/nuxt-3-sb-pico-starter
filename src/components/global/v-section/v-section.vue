@@ -45,8 +45,20 @@ const props = defineProps({
 </script>
 
 <template>
-  <component :is="element" :class="[$style.section, , background ? $style.section__background : null]">
-    <div :class="[isContainer ? $style.section__inside : null]">
+  <component 
+    :is="element" 
+    :class="[
+      $style.section, 
+      background 
+        ? $style.section__background 
+        : null
+    ]">
+    <div 
+      :class="[
+        isContainer 
+          ? $style.section__inside 
+          : null
+        ]">
 
       <slot />
     </div>

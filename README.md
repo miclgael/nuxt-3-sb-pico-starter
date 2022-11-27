@@ -41,3 +41,11 @@ To work on components in isolation using Storybook:
 ```bash
 pnpm run storybook
 ```
+
+## Test
+
+Run tests with vitest
+
+```bash
+pnpm run test
+```

@@ -1,4 +1,4 @@
-import { markup } from './mockMarkup'
+import markup from './mockData.html?raw'
 
 /**
  * Boilerplate for the component

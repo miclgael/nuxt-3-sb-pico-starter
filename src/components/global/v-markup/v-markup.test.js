@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 
-describe('Section components', () => {
+describe('Markup', () => {
   it('basic test', async () => {
     expect(true).toBe(true)
   })
