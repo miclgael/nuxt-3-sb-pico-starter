@@ -27,6 +27,19 @@ const props = defineProps({
   color: {
     type: String,
     default: '#000000'
+  },
+
+  theme: {
+    type: Object,
+    default: () => ({}),
+    validator: (value) => {
+      return (
+        typeof value === 'object' &&
+        Object.keys(value).every((key) => {
+          return ['background', 'color'].includes(key)
+        })
+      )
+    }
   }
 })
 </script>

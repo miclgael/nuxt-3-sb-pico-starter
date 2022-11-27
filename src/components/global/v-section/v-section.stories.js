@@ -10,10 +10,7 @@ const colorControls = {
     category: 'Colors',
     type: {
       summary: 'Color value',
-      detail: `
-        Valid values include: 
-        - #000, 
-        - #000000, rgb(0,0,0), rgba(0,0,0,1), hsl(0,0%,0%), hsla(0,0%,0%,1), or any valid CSS color name.`,
+      detail: 'Valid values include: \n- Any valid CSS color value \n- Any valid CSS gradient value \n- e.g. `#000000`, `rgba(0,0,0,1)`, `linear-gradient(90deg, #000000 0%, #ffffff 100%)` \n\n Colors Must be WCAG AA compliant'
     }
   }
 }
@@ -62,7 +59,7 @@ const defaultArgs = {
 }
 
 /**
- * Boilerplate for all stories
+ * Boilerplate for single element stories
  */
 const Template = (args) => ({
   // Components used in your story `template` are defined in the `components` object
@@ -74,7 +71,7 @@ const Template = (args) => ({
 })
 
 /**
- * Component stories
+ * Single component stories
  */
 export const WithContainer = Template.bind({})
 WithContainer.args = {
@@ -84,6 +81,35 @@ WithContainer.args = {
 
 export const WithoutContainer = Template.bind({})
 WithoutContainer.args = {
+  isContainer: false,
+  ...defaultArgs
+}
+
+/**
+ * Boilerplate for nested stories
+ */
+const MultiTemplate = (args) => ({
+  // Components used in your story `template` are defined in the `components` object
+  components: { VSection },
+  // The story's `args` need to be mapped into the template through the `setup()` method
+  setup: () => ({ args }),
+  // And then the `args` are bound to your component with `v-bind="args"`
+  template: `
+    <v-section element="main" container="true">
+      <v-section v-bind="args">${args.slotTemplate}</v-section>
+    </v-section>`
+})
+
+defaultArgs.element = 'header'
+export const WrappedHeader = MultiTemplate.bind({})
+WrappedHeader.args = {
+  isContainer: false,
+  ...defaultArgs
+}
+
+defaultArgs.element = 'footer'
+export const WrappedFooter = MultiTemplate.bind({})
+WrappedFooter.args = {
   isContainer: false,
   ...defaultArgs
 }
