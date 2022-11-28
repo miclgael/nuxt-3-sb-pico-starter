@@ -42,9 +42,10 @@ To work on components in isolation using Storybook:
 pnpm run storybook
 ```
 
-## Test
+## Testing
 
-Run tests with vitest
+Run tests with [Vitest](https://vitest.dev/api/) and [Vue test utils](https://test-utils.vuejs.org/
+)
 
 ```bash
 pnpm run test
