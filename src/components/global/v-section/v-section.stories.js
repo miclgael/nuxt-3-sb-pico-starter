@@ -28,12 +28,14 @@ export default {
       description: 'Any valid html element',
       control: {
         type: 'select',
-        options: ['main', 'div', 'section', 'article', 'aside', 'header', 'footer']
-      }
+      },
+      options: ['main', 'div', 'section', 'article', 'aside', 'header', 'footer']
     },
     isContainer: {
       description: 'Whether or not to wrap the content in a container',
-      control: { type: 'boolean' },
+      control: {
+        type: 'boolean'
+      },
     }
   },
   parameters: {

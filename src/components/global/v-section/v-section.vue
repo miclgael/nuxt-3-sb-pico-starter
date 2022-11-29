@@ -1,3 +1,24 @@
+<template>
+  <component 
+    :is="element" 
+    :class="[
+      $style.section, 
+      background 
+        ? $style.section__background 
+        : null
+    ]">
+    <div 
+      :class="[
+        isContainer 
+          ? $style.section__inside 
+          : null
+        ]">
+
+      <slot />
+    </div>
+  </component>
+</template>
+
 <script setup>
 const props = defineProps({
   /**
@@ -28,42 +49,8 @@ const props = defineProps({
     type: String,
     default: '#000000'
   },
-
-  theme: {
-    type: Object,
-    default: () => ({}),
-    validator: (value) => {
-      return (
-        typeof value === 'object' &&
-        Object.keys(value).every((key) => {
-          return ['background', 'color'].includes(key)
-        })
-      )
-    }
-  }
 })
 </script>
-
-<template>
-  <component 
-    :is="element" 
-    :class="[
-      $style.section, 
-      background 
-        ? $style.section__background 
-        : null
-    ]">
-    <div 
-      :class="[
-        isContainer 
-          ? $style.section__inside 
-          : null
-        ]">
-
-      <slot />
-    </div>
-  </component>
-</template>
 
 <style module scoped>
 section {
