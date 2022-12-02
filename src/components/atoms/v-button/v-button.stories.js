@@ -1,11 +1,11 @@
 import VButton from './v-button.vue'
-import { colorOptions } from './v-button.config.js'
+import * as config from './v-button.config.js'
 
 export default {
   title: 'Atoms/VButton',
   component: VButton,
   argTypes: {
-    color: { control: { type: 'select' }, options: colorOptions },
+    color: { control: { type: 'select' }, options: config.colorOptions },
     to: { control: { type: 'text' } }
   },
 }
@@ -18,7 +18,7 @@ const Template = (args, { argTypes }) => ({
 })
 
 const defaultArgs = {
-  color: colorOptions.at(0),
+  color: config.colorOptions.at(0),
 }
 
 export const DefaultButton = Template.bind({})
@@ -35,18 +35,25 @@ WithToProp.args = {
 
 export const ColorIsPrimary = Template.bind({})
 ColorIsPrimary.args = {
-  color: 'primary',
+  color: config.colorOptions.at(0),
   default: 'Button, primary color'
 }
 
 export const ColorIsSecondary = Template.bind({})
 ColorIsSecondary.args = {
-  color: 'secondary',
+  color: config.colorOptions.at(1),
   default: 'Button, secondary color',
 }
 
 export const ColorIsContrast = Template.bind({})
 ColorIsContrast.args = {
-  color: 'contrast',
+  color: config.colorOptions.at(2),
   default: 'Button, high contrast color',
+}
+
+export const VariantOutline = Template.bind({})
+VariantOutline.args = {
+  color: config.colorOptions.at(0),
+  variant: 'outline',
+  default: 'Button, Outlined variant',
 }

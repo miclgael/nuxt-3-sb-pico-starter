@@ -3,14 +3,14 @@
     :is="buttonType($props)" 
     v-bind="$props" 
     role="button"
-    :class="$props.color"
+    :class="[$props.color, $props.variant]"
   >
     <slot />
   </component>
 </template>
 
 <script setup>
-import { colorOptions } from './v-button.config.js'
+import * as config from './v-button.config.js'
 const props = defineProps({
   /**
    * The presence of the `to` prop, determines the button type.
@@ -42,35 +42,16 @@ const props = defineProps({
   color: {
     type: String,
     default: 'primary',
-    validator: (value) => colorOptions.includes(value)
+    validator: (value) => config.colorOptions.includes(value)
   },
-  /**
-   * The size of the button
-   */
-  // size: {
-  //   type: String,
-  //   default: 'medium',
-  //   validator: (value) => ['small', 'medium', 'large'].includes(value)
-  // },
-  /**
-   * The shape of the button
-   */
-  // shape: {
-  //   type: String,
-  //   default: 'square',
-  //   validator: (value) => ['square', 'rounded', 'pill'].includes(value)
-  // },
   /**
    * The variant of the button
    */
-  // variant: {
-  //   type: String,
-  //   default: 'contained',
-  //   validator: (value) => ['contained', 'outlined', 'text'].includes(value)
-  // },
-  /**
-   * The icon to display on the button
-   */
+  variant: {
+    type: String,
+    default: null,
+    validator: (value) => ['outline'].includes(value)
+  }
 })
 
 const buttonType = (props) => {
