@@ -8,32 +8,10 @@ export default {
   title: 'Global/VGrid',
   component: VGrid,
   argTypes: {
-    minColSize: {
-      control: {
-        type: 'number',
-        min: 0,
-        max: 32
-      }
-    },
-    gap: {
-      control: {
-        type: 'number',
-        min: 0,
-        max: 10
-      }
-    },
-    align: {
-      control: {
-        type: 'select',
-      },
-      options: ['center', 'start', 'end']
-    },
-    justify: {
-      control: {
-        type: 'select',
-      },
-      options: ['center', 'start', 'end', 'space-between', 'space-around', 'space-evenly']
-    }
+    minColSize: { control: { type: 'number', min: 0, max: 32 } },
+    gap: { control: { type: 'number', min: 0, max: 10 } },
+    align: { control: { type: 'select', }, options: ['center', 'start', 'end'] },
+    justify: { control: { type: 'select', }, options: ['center', 'start', 'end', 'space-between', 'space-around', 'space-evenly'] }
   }
 }
 
