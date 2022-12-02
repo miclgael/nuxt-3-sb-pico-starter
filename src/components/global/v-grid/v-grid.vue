@@ -5,6 +5,8 @@
 </template>
 
 <script setup>
+import { alignOptions, justifyOptions } from './v-grid.data.js'
+
 defineProps({
   /**
    * The minimum width (in rems) of each grid cell, before it wraps to the next row. Number becomes rem units.
@@ -28,7 +30,7 @@ defineProps({
   align: {
     type: String,
     default: 'center',
-    validator: (value) => ['center', 'start', 'end'].includes(value)
+    validator: (value) => alignOptions.includes(value)
   },
   /**
    * CSS `justify-items` value for the grid
@@ -37,7 +39,7 @@ defineProps({
     type: String,
     default: 'start',
     validate: (value) => {
-      return ['center', 'start', 'end', 'space-between', 'space-around', 'space-evenly'].includes(value)
+      return justifyOptions.includes(value)
     }
   }
 })

@@ -1,6 +1,8 @@
 import VGrid from './v-grid.vue'
 import VGridCell from './v-grid-cell.vue'
 
+import { alignOptions, justifyOptions } from './v-grid.data.js'
+
 /**
  * Boilerplate for the component
  */
@@ -10,8 +12,8 @@ export default {
   argTypes: {
     minColSize: { control: { type: 'number', min: 0, max: 32 } },
     gap: { control: { type: 'number', min: 0, max: 10 } },
-    align: { control: { type: 'select', }, options: ['center', 'start', 'end'] },
-    justify: { control: { type: 'select', }, options: ['center', 'start', 'end', 'space-between', 'space-around', 'space-evenly'] }
+    align: { control: { type: 'select', }, options: alignOptions },
+    justify: { control: { type: 'select', }, options: justifyOptions }
   }
 }
 
