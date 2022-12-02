@@ -29,7 +29,7 @@ DefaultButton.args = {
 export const WithToProp = Template.bind({})
 WithToProp.args = {
   ...defaultArgs,
-  to: '#',
+  to: '/about',
   default: 'Text link, styled like a button',
 }
 
