@@ -1,7 +1,7 @@
 import VGrid from './v-grid.vue'
 import VGridCell from './v-grid-cell.vue'
 
-import { alignOptions, justifyOptions } from './v-grid.data.js'
+import { alignOptions, justifyOptions } from './v-grid.config.js'
 
 /**
  * Boilerplate for the component

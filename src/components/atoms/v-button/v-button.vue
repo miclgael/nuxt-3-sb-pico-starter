@@ -3,13 +3,14 @@
     :is="buttonType($props)" 
     v-bind="$props" 
     role="button"
+    :class="$props.color"
   >
     <slot />
   </component>
 </template>
 
 <script setup>
-import { colorOptions } from './v-button.data.js'
+import { colorOptions } from './v-button.config.js'
 const props = defineProps({
   /**
    * The presence of the `to` prop, determines the button type.

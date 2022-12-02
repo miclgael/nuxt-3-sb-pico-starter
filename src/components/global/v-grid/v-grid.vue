@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { alignOptions, justifyOptions } from './v-grid.data.js'
+import { alignOptions, justifyOptions } from './v-grid.config.js'
 
 defineProps({
   /**
