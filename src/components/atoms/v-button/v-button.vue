@@ -1,7 +1,7 @@
 <template>
   <component 
     :is="buttonType($props)" 
-    v-bind="$props" 
+    v-bind="linkProps($props)" 
     role="button"
     :class="[$props.color, $props.variant]"
   >
@@ -13,7 +13,8 @@
 import * as config from './v-button.config.js'
 const props = defineProps({
   /**
-   * The presence of the `to` prop, determines the button type.
+   * The presence of the `to` prop, will output an `nuxt-link`, or `a` tag, depending on its contents.
+   * Use for navigating between different routes, or external links.
    */
   to: {
     type: String,
@@ -21,21 +22,13 @@ const props = defineProps({
   },
 
   /**
-   * The target of the link, if `type` is `link`
+   * Use for triggering a function.
    */
-  // target: {
-  //   type: String,
-  //   default: '_self',
-  //   validator: (value) => ['_self', '_blank', '_parent', '_top'].includes(value)
-  // },
-  /**
-   * The rel attribute of the link, if `type` is `link`
-   */
-  // rel: {
-  //   type: String,
-  //   default: 'noopener noreferrer',
-  //   validator: (value) => ['noopener', 'noreferrer', 'noopener noreferrer'].includes(value)
-  // },
+  action: {
+    type: String,
+    default: null
+  },
+
   /**
    * The color of the button
    */
@@ -44,6 +37,7 @@ const props = defineProps({
     default: 'primary',
     validator: (value) => config.colorOptions.includes(value)
   },
+
   /**
    * The variant of the button
    */
@@ -55,6 +49,43 @@ const props = defineProps({
 })
 
 const buttonType = (props) => {
-  return props.to !== null ? 'nuxt-link' : 'button'
+  const isExternal = 
+    props.to && props.to.startsWith('http') || 
+    props.to && props.to.startsWith('https') ||
+    props.to && props.to.startsWith('www')
+
+  const isNuxtLink = props.to && props.to.startsWith('/')
+
+  if (isExternal) {
+    return 'a'
+  } else if (isNuxtLink) {
+    return 'nuxt-link'
+  } else {
+    return 'button'
+  }
 }
+const linkProps = (props) => {
+  const isExternal = 
+    props.to && props.to.startsWith('http') || 
+    props.to && props.to.startsWith('www')
+
+  const isNuxtLink = props.to && props.to.startsWith('/')
+
+  if (isExternal) {
+    return {
+      ...props,
+      href: props.to
+    }
+  } else if (isNuxtLink) {
+    return {
+      ...props,
+      to: props.to
+    }
+  } else {
+    return {
+      ...props
+    }
+  }
+}
+
 </script>

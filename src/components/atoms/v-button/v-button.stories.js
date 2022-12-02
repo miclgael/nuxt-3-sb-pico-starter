@@ -26,11 +26,18 @@ DefaultButton.args = {
   ...defaultArgs,
   default: 'Button, styled like a button, no `to` prop was present',
 }
-export const WithToProp = Template.bind({})
-WithToProp.args = {
+export const WithRelativeToProp = Template.bind({})
+WithRelativeToProp.args = {
   ...defaultArgs,
   to: '/about',
-  default: 'Text link, styled like a button',
+  default: 'Nuxt-link, styled like a button',
+}
+
+export const WithAbsoluteToProp = Template.bind({})
+WithAbsoluteToProp.args = {
+  ...defaultArgs,
+  to: 'https://google.com',
+  default: 'Nuxt-link, styled like a button',
 }
 
 export const ColorIsPrimary = Template.bind({})
