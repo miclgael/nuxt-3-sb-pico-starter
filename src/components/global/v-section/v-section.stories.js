@@ -37,24 +37,14 @@ export default {
         type: 'boolean'
       },
     }
-  },
-  parameters: {
-    controls: {
-      exclude: /(?:\b|')(default)(?:\b|')/
-    }
-  },
-  docs: {
-    description: {
-      component: 'Some component _markdown_',
-    },
-  },
+  }
 }
 
 /**
  * Args common between all components
  */
 const defaultArgs = {
-  slotTemplate: '<h1>Content</h1>',
+  default: '<h1>Content</h1>',
   background: 'lightblue',
   color: 'indigo',
   element: 'section'
@@ -63,13 +53,15 @@ const defaultArgs = {
 /**
  * Boilerplate for single element stories
  */
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
+  // Required for working slots
+  props: Object.keys(argTypes),
   // Components used in your story `template` are defined in the `components` object
   components: { VSection },
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup: () => ({ args }),
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: `<v-section v-bind="args">${args.slotTemplate}</v-section>`
+  template: `<v-section v-bind="args">${args.default}</v-section>`
 })
 
 /**
@@ -98,7 +90,7 @@ const MultiTemplate = (args) => ({
   // And then the `args` are bound to your component with `v-bind="args"`
   template: `
     <v-section element="main" container="true">
-      <v-section v-bind="args">${args.slotTemplate}</v-section>
+      <v-section v-bind="args">${args.default}</v-section>
     </v-section>`
 })
 
