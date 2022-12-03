@@ -10,7 +10,7 @@ export default {
   title: 'Global/VGrid',
   component: VGrid,
   argTypes: {
-    minimumColumnWidth: { control: { type: 'number', min: 0, max: 32 } },
+    minimumColumnWidth: { control: { type: 'number', min: 8, max: 32 } },
     gap: { control: { type: 'number', min: 0, max: 10 } },
     align: { control: { type: 'select', }, options: alignOptions },
     justify: { control: { type: 'select', }, options: justifyOptions }
