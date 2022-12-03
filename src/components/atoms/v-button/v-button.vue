@@ -49,11 +49,7 @@ const props = defineProps({
 })
 
 const buttonType = (props) => {
-  const isExternal = 
-    props.to && props.to.startsWith('http') || 
-    props.to && props.to.startsWith('https') ||
-    props.to && props.to.startsWith('www')
-
+  const isExternal = props.to && props.to.startsWith('http')
   const isNuxtLink = props.to && props.to.startsWith('/')
 
   if (isExternal) {
@@ -65,10 +61,7 @@ const buttonType = (props) => {
   }
 }
 const linkProps = (props) => {
-  const isExternal = 
-    props.to && props.to.startsWith('http') || 
-    props.to && props.to.startsWith('www')
-
+  const isExternal = props.to && props.to.startsWith('http')
   const isNuxtLink = props.to && props.to.startsWith('/')
 
   if (isExternal) {
