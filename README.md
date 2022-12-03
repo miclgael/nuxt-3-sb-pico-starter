@@ -1,4 +1,4 @@
-# Nuxt 3, Storybook (Vite), Vitest, Pico CSS starter
+# [Nuxt 3](https://nuxt.com/), [Storybook (Vite)](https://storybook.js.org/docs/vue/builders/vite), [Vitest](https://vitest.dev/), [Pico CSS](https://picocss.com/) starter
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
