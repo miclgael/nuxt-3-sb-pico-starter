@@ -11,6 +11,10 @@ Check out the [Nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 - [x] 😎 BYO everything else!
 - [x] ✨ `pnpm` by default
 
+## Screenshots
+
+![Screenshot of Storybook interface](.github/screenshots/storybook.png)
+
 ## Setup
 
 Make sure to install the dependencies:
