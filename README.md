@@ -44,8 +44,7 @@ pnpm run storybook
 
 ## Testing
 
-Run tests with [Vitest](https://vitest.dev/api/) and [Vue test utils](https://test-utils.vuejs.org/
-)
+Run tests with [Vitest](https://vitest.dev/api/) and [Vue test utils](https://test-utils.vuejs.org/)
 
 ```bash
 pnpm run test
