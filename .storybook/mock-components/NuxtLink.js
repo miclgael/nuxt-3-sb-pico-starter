@@ -13,6 +13,7 @@ export const NuxtLink = {
     }
   },
   methods: {
+    // Log the action in the actions panel
     log () {
       action('link target')(this.to)
     }
