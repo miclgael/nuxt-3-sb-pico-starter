@@ -10,7 +10,7 @@ export default {
   title: 'Global/VGrid',
   component: VGrid,
   argTypes: {
-    minColSize: { control: { type: 'number', min: 0, max: 32 } },
+    minimumColumnWidth: { control: { type: 'number', min: 0, max: 32 } },
     gap: { control: { type: 'number', min: 0, max: 10 } },
     align: { control: { type: 'select', }, options: alignOptions },
     justify: { control: { type: 'select', }, options: justifyOptions }
@@ -32,7 +32,7 @@ const Template = (args, { argTypes }) => ({
 })
 
 const defaultArgs = {
-  minColSize: 16,
+  minimumColumnWidth: 16,
   gap: 1,
   align: 'start',
   justify: 'start'
