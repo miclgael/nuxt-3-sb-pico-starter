@@ -1,3 +1,8 @@
+/**
+ * Mock NuxtLink component for Storybook
+ * @link https://nuxtjs.org/docs/features/nuxt-components/#the-nuxtlink-component
+ */
+
 import { action } from '@storybook/addon-actions'
 
 export const NuxtLink = {
