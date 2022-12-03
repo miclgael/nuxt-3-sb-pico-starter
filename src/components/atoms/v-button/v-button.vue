@@ -22,7 +22,8 @@ const props = defineProps({
   },
 
   /**
-   * Use for triggering a function.
+   * Provide action name. Use for triggering a function. 
+   * Type must be a button.
    */
   action: {
     type: String,
