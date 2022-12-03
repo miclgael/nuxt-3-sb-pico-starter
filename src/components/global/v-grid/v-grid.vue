@@ -9,7 +9,9 @@ import { alignOptions, justifyOptions } from './v-grid.config.js'
 
 defineProps({
   /**
-   * The minimum width (in rems) of each grid cell, before it wraps to the next row. Number becomes rem units.
+   * The minimum width (in rems) of each grid cell, 
+   * before it wraps to the next row. 
+   * Number becomes rem units.
    */
   minimumColumnWidth: {
     type: Number,
