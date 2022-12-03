@@ -1,6 +1,15 @@
 # [Nuxt 3](https://nuxt.com/), [Storybook (Vite)](https://storybook.js.org/docs/vue/builders/vite), [Vitest](https://vitest.dev/), [Pico CSS](https://picocss.com/) starter
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+Check out the [Nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+
+## Features
+
+- [x] 🎨 Pico.css minimal CSS framework
+- [x] 📚 Storybook
+- [x] 🏗️ 4 Starter components (`v-grid`, `v-section`, `v-markup`, `v-button`), with stories and unit tests
+- [x] 💚 Vite-friendly
+- [x] 😎 BYO everything else!
+- [x] ✨ `pnpm` by default
 
 ## Setup
 
