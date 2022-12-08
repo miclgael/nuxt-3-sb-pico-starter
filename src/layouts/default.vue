@@ -10,7 +10,7 @@ const headerFooterTheme = {
   <v-section element="header" :theme="headerFooterTheme">
     <h1>Header</h1>
   </v-section>
-  <v-section element="main" :container="false">
+  <v-section element="main" :is-container="false">
     <slot />
   </v-section>
   <v-section element="footer" :theme="headerFooterTheme">
