@@ -1,5 +1,7 @@
 # [Nuxt 3](https://nuxt.com/), [Storybook (Vite)](https://storybook.js.org/docs/vue/builders/vite), [Vitest](https://vitest.dev/), [Pico CSS](https://picocss.com/) starter
 
+> ⚠️ **Archived as of 9th Jan, 2024.** Definitely don't use this :) 
+
 Check out the [Nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
 ## Features
